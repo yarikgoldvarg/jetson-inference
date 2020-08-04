@@ -3,5 +3,5 @@ mkdir build
 cd build
 cmake ../
 make -j$(nproc)
-make install
-ldconfig
+sudo make install
+sudo ldconfig
