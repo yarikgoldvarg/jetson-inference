@@ -3,7 +3,8 @@ RUN apt update && apt install -y sudo
 
 RUN mkdir install
 WORKDIR /install
-COPY . .
-RUN chmod -R +x /install
+RUN git clone --recursive https://github.com/yarikgoldvarg/jetson-inference.git
+RUN chmod -R +x /install/jetson-inference
+WORKDIR /install/jetson-inference
 RUN ./build.sh
 WORKDIR /
