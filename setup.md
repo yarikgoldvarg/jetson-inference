@@ -1,5 +1,5 @@
 
-## Host
+## Step 1 [Host]
 
 ```
 
@@ -21,4 +21,21 @@ $ docker run -it --runtime nvidia --network host --name jetson-inference yarikgo
 
 
 
-## Container
+## Step 2 [Container]
+
+```
+$ cd install/jetson-inference/
+$ sh build.sh
+$ exit
+
+```
+
+## Step 3 [Host]
+
+```
+$ docker commit $(docker ps -aqf "name=jetson-inference") yarikgold/jetson-inference:latest
+
+$ docker push yarikgold/jetson-inference:latest
+
+```
+
