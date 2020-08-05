@@ -5,9 +5,9 @@ COMMIT=$(git rev-parse --short HEAD)
 TAG="latest"
 
 docker login
-docker build  . -t $PROJECT:$COMMIT
+sudo docker build  . -t $PROJECT:$COMMIT
 docker tag $PROJECT:$COMMIT $REPO/$PROJECT:$TAG
-docker push $REPO/$PROJECT:$TAG
+#docker push $REPO/$PROJECT:$TAG
 
 
 
