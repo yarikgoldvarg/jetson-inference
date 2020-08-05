@@ -6,5 +6,5 @@ WORKDIR /install
 RUN git clone --recursive https://github.com/yarikgoldvarg/jetson-inference.git
 RUN chmod -R +x /install/jetson-inference
 WORKDIR /install/jetson-inference
-RUN ./build.sh
+RUN sudo ./build.sh
 WORKDIR /
