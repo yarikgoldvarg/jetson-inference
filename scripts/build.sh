@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir build
 cd build
-cmake ../
+cmake ../../
 make -j$(nproc)
 sudo make install
 sudo ldconfig
